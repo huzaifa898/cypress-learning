@@ -14,7 +14,7 @@ describe("Registration Functionality", () => {
         cy.get("input[id='customer.password']").type('password123')
         cy.get("#repeatedPassword").type('password123')
         cy.get("input[value='Register']").click()
-        //cy.get("span[id='customer.username.errors']").should('have.text', 'This username already exists.')
+        cy.get("span[id='customer.username.errors']").should('have.text', 'This username already exists.')
     })
 }) 
 
